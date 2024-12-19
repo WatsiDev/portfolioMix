@@ -1,63 +1,78 @@
 import React, { useState } from "react";
-import Card from "./card.astro";
+import Card from "./card";
+import { webProjects } from "../model/webProjects";
+import { mobileProjects } from "../model/mobileProjects";
 
 const Tabs = () => {
   const [activeTab, setActiveTab] = useState("web");
+  const [isAnimating, setIsAnimating] = useState(false);
 
-  const webProjects = [
-    {
-      image: "holdemWeb.png",
-      title: "Hold´em Marketing",
-      text: "Página web desarrollada para Holdem Marketing...",
-    },
-    {
-      image: "bytezone.png",
-      title: "ByteZone",
-      text: "ByteZone es un proyecto universitario...",
-    },
-  ];
-
-  const mobileProjects = [
-    {
-      image: "tasklist.png",
-      title: "Tasklist App",
-      text: "Una aplicación para gestionar tareas...",
-    },
-  ];
-
+  // Asigna los proyectos según la pestaña activa
   const projects = activeTab === "web" ? webProjects : mobileProjects;
+
+  // Maneja la transición de animación
+  const handleTabChange = (tab: string) => {
+    if (activeTab !== tab) {
+      setIsAnimating(true);
+      setTimeout(() => {
+        setActiveTab(tab);
+        setIsAnimating(false);
+      }, 300); // La duración debe coincidir con la animación en Tailwind
+    }
+  };
 
   return (
     <section id="3">
       <h2 className="text-center text-xl py-4">Proyectos</h2>
       <p className="text-center">
-        En esta sección, encontrarás mis proyectos universitarios y personales...
+        En esta sección, encontrarás mis proyectos
+        universitarios y personales. Cada proyecto incluye una breve descripción
+        y un enlace directo a su repositorio de GitHub, donde podrás explorar el
+        código. Algunos proyectos también están desplegados para una experiencia
+        interactiva.
       </p>
-      <div className="flex justify-center space-x-4 my-4">
-        <button
-          onClick={() => setActiveTab("web")}
-          className={`px-4 py-2 rounded ${
-            activeTab === "web" ? "bg-purple-600 text-white" : "bg-gray-200"
-          }`}
-        >
-          Web
-        </button>
-        <button
-          onClick={() => setActiveTab("mobile")}
-          className={`px-4 py-2 rounded ${
-            activeTab === "mobile" ? "bg-purple-600 text-white" : "bg-gray-200"
-          }`}
-        >
-          Móvil
-        </button>
+
+      <div className="flex justify-center">
+        <div className="flex justify-center w-[416px] space-x-8 my-4 bg-violet-500 rounded-xl py-2">
+          <button
+            onClick={() => handleTabChange("web")}
+            className={`px-4 py-2 w-[163px] rounded-xl transition-all ease-in-out duration-300 ${
+              activeTab === "web"
+                ? "bg-[#6D44CE] shadow-inner text-white transform scale-95"
+                : "bg-[#5727C7] shadow-lg text-white"
+            }`}
+          >
+            WEB
+          </button>
+          <button
+            onClick={() => handleTabChange("mobile")}
+            className={`px-4 py-2 w-[163px] rounded-xl transition-all ease-in-out duration-300 ${
+              activeTab === "mobile"
+                ? "bg-[#6D44CE] shadow-inner text-white transform scale-95"
+                : "bg-[#5727C7] shadow-lg text-white"
+            }`}
+          >
+            MOBILE
+          </button>
+        </div>
       </div>
-      <div className="flex gap-3 flex-wrap justify-center mt-5">
+
+      <div
+        className={`flex gap-3 flex-wrap justify-center mt-5 transition-opacity duration-300 ${
+          isAnimating ? "opacity-0 translate-y-4" : "opacity-100 translate-y-0"
+        }`}
+      >
         {projects.map((project, index) => (
           <Card
             key={index}
             image={project.image}
             title={project.title}
             text={project.text}
+            tecnologias={project.tecnologias}
+            repositorios={project.repositorios}
+            imageRepo={project.imageRepo}
+            web={project.web}
+            imageWeb={project.imageWeb}
           />
         ))}
       </div>

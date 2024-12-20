@@ -1,24 +1,79 @@
-<header class="flex h-20 font-extralight justify-center items-center gap-3">
-    <a
-    href="#1"
-    class="text-lg inline-block align-middle hover:translate-y-3 hover:scale-125 hover:bg-black hover:bg-opacity-10 rounded-2xl px-2"
-    >Sobre mí</a
-    >
-    <a
-    href="#2"
-    class="text-lg inline-block align-middle hover:translate-y-3 hover:scale-125 hover:bg-black hover:bg-opacity-10 rounded-2xl px-2"
-    >Habilidades</a
-    >
-    <h1 class="text-4xl place-content-center px-3">- PORTFOLIO -</h1>
-    <a
-    href="#3"
-    class="text-lg inline-block align-middle hover:translate-y-3 hover:scale-125 hover:bg-black hover:bg-opacity-10 rounded-2xl px-2"
-    >Proyectos</a
-    >
-    <a
-    href="#4"
-    class="text-lg inline-block align-middle hover:translate-y-3 hover:scale-125 hover:bg-black hover:bg-opacity-10 rounded-2xl px-2"
-    >Section</a
-    >
-    
-</header>
+---
+
+---
+
+<header>
+    <!-- Para pantallas grandes -->
+    <div class="hidden sm:flex h-20 font-extralight justify-center items-center gap-3">
+      <a
+        href="#1"
+        class="text-lg inline-block align-middle hover:translate-y-3 hover:scale-125 hover:bg-black hover:bg-opacity-10 rounded-2xl px-2"
+      >
+        Sobre mí
+      </a>
+      <a
+        href="#2"
+        class="text-lg inline-block align-middle hover:translate-y-3 hover:scale-125 hover:bg-black hover:bg-opacity-10 rounded-2xl px-2"
+      >
+        Habilidades
+      </a>
+      <h1 class="text-4xl place-content-center px-3">- PORTFOLIO -</h1>
+      <a
+        href="#3"
+        class="text-lg inline-block align-middle hover:translate-y-3 hover:scale-125 hover:bg-black hover:bg-opacity-10 rounded-2xl px-2"
+      >
+        Proyectos
+      </a>
+      <a
+        href="#4"
+        class="text-lg inline-block align-middle hover:translate-y-3 hover:scale-125 hover:bg-black hover:bg-opacity-10 rounded-2xl px-2"
+      >
+        Section
+      </a>
+    </div>
+  
+    <!-- Para dispositivos pequeños (sm o menos) -->
+    <div class="sm:hidden flex flex-col items-center">
+      <!-- Título centrado -->
+      <h1 class="text-3xl font-light text-white my-4">- PORTFOLIO -</h1>
+  
+      <!-- Bottom Navbar -->
+      <nav class="fixed bottom-0 w-full bg-gradient-to-tr from-[#040d2c] to-[#462a8b] bg-opacity-5 text-white py-3 shadow-lg z-50">
+        <div class="flex justify-around">
+          <a
+            href="#1"
+            class="flex flex-col items-center hover:text-cyan-400 transition-transform transform hover:scale-110"
+          >
+            <img src="user.svg" alt="user" class="mb-1">
+            <span class="text-sm">Sobre mí</span>
+          </a>
+          <a
+            href="#2"
+            class="flex flex-col items-center hover:text-cyan-400 transition-transform transform hover:scale-110"
+          >
+            <img src="code.svg" alt="habilidades" class="mb-1">
+            <span class="text-sm">Habilidades</span>
+          </a>
+          <a
+            href="#3"
+            class="flex flex-col items-center hover:text-cyan-400 transition-transform transform hover:scale-110"
+          >
+            <img src="folder.svg" alt="Proyectos" class="mb-1">
+            <span class="text-sm">Proyectos</span>
+          </a>
+          <!--
+            <a
+              href="#4"
+              class="flex flex-col items-center hover:text-cyan-400 transition-transform transform hover:scale-110"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mb-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+              </svg>
+              <span class="text-sm">Section</span>
+            </a>
+           -->
+        </div>
+      </nav>
+    </div>
+  </header>
+  

@@ -11,13 +11,14 @@ const Card = ({
   imageWeb,
 }) => {
   return (
-    <div className="border w-2/5 rounded-lg hover:bg-black hover:bg-opacity-5 hover:border-cyan-400">
+    <div className="border w-full md:w-3/4 lg:w-2/5 rounded-lg hover:bg-black hover:bg-opacity-5 hover:border-cyan-400">
+
       <img
         src={image}
         alt="img"
         className="object-cover w-full h-96 rounded-t-lg"
       />
-      <h2 className="place-self-center text-xl pt-2">{title}</h2>
+      <h2 className="place-self-center text-xl pt-2 px-2">{title}</h2>
       <p className="p-2">{text}</p>
 
       <div className="flex justify-evenly p-4">

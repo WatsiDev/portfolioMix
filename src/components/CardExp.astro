@@ -1,0 +1,21 @@
+---
+interface Props {
+    title: string;
+    date: string;
+    description: string;
+    icon: string;
+}
+const { title, date, description, icon} = Astro.props
+---
+
+<div class="border rounded-lg p-2 hover:bg-black hover:bg-opacity-5 hover:border-cyan-300">
+    <h3 class="text-lg font-light inline-flex gap-2">
+        {title}
+        <img class="w-6 h-6" src={icon} alt="school">
+    </h3>
+    <hr>
+    <b>{date}</b>
+    <p class="pt-2">
+        {description}
+    </p>
+</div>

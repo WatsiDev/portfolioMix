@@ -1,0 +1,40 @@
+---
+import CardExp from "./CardExp.astro";
+---
+
+<!-- 
+    Añadir linea del tiempo de estudios y experiencia laboral (Estadias Base4.mx)
+-->
+
+<section id="4" class="grid grid-cols-1 lg:grid-cols-[1fr_0.1fr_1fr] lg:gap-2 gap-4">
+    <h2 class="lg:col-span-5 text-center pt-4 text-xl">Experiencia</h2>
+    <div
+        class="lg:col-start-2 lg:row-start-2 lg:row-span-3 lg:content-center lg:bg-white lg:bg-opacity-10 lg:hover:bg-opacity-25 lg:w-1/6 lg:justify-self-center lg:rounded-lg"
+      >
+      </div>
+
+    <div class="lg:col-start-1">
+        <CardExp
+          title={"Universidad Tecnológica de Puebla"}
+          icon={"graduation.svg"}
+          date={"2024 - Actualmente"}
+          description={"Actualmente curso la Ingeniería en Desarrollo y Gestión de Software, donde continuo perfeccionando mis habilidades en programación, desarrollo de software y gestión de proyectos. Mi enfoque se encuentra en la creación de aplicaciones móviles y web con un enfoque en buenas prácticas y metodologías ágiles."}
+        />
+      </div>
+    <div class="lg:col-start-3 lg:row-start-3">
+        <CardExp
+          title={"Estadías Base4.mx"}
+          icon={"work.svg"}
+          date={"2024"}
+          description={"Realicé mi estadía en Base4.mx, trabajando en un proyecto de código abierto para la plataforma Open Journal Systems (OJS), un software libre para la gestión de revistas académicas. Fui responsable de crear un plugin de audio para implementar un reproductor web de archivos MPEG en las revistas, mejorando la experiencia de los lectores."}
+        />
+      </div>
+      <div class="lg:col-start-1 lg:row-start-4">
+        <CardExp
+          title={"Universidad Tecnológica de Puebla"}
+          icon={"graduation.svg"}
+          date={"2022 - 2024"}
+          description={"Me gradué como Técnico Superior Universitario en Tecnologías de la Información, con especialización en Desarrollo de Software Multiplataforma. Durante mis estudios adquirí sólidos conocimientos en programación, bases de datos y desarrollo de aplicaciones multiplataforma."}
+        />
+      </div>
+</section>

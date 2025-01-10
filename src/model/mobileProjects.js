@@ -11,7 +11,22 @@ export const mobileProjects = [
         "jetpack.svg"
       ],
       repositorios: [
-        { url: "https://github.com/WatsiDev/ListTask-App", name: "App Repo", image: "github2.png" }
+        { url: "https://github.com/WatsiDev/ListTask-App", name: "Repositorio", image: "github2.png" }
+      ],
+      imageRepo: "github2.png",
+      web: null,
+      imageWeb: null
+    },
+    {
+      image: "barcaone.png",
+      title: "BarcaOne Clone",
+      text: "El BarcaOne Clone es una aplicación desarrollada con Kotlin y Jetpack Compose que simula las funcionalidades de la popular app BarcaOne. El objetivo principal de este proyecto es practicar y mejorar mis habilidades en diversas áreas del desarrollo móvil, como la navegación, el manejo de estado, el diseño con Jetpack Compose, y la implementación de modelos de datos y fuentes de datos (datasources).",
+      tecnologias: [
+        "kotlin.png",
+        "jetpack.svg"
+      ],
+      repositorios: [
+        {  url: "https://github.com/WatsiDev/Bar-aOneClone", name: "Repositorio", image: "github2.png" }
       ],
       imageRepo: "github2.png",
       web: null,

@@ -1,3 +1,7 @@
+---
+import TechnologiesCard from "./technologiesCard.astro";
+---
+
 <!-- 
     TODO Añadir porcentaje a tecnologias: Astro, Tailwind, Git, Github, MySQL, Jetpack Compose, Kotlin...
     TODO Añadir intereses: Ktor, C#, ASP.NET...
@@ -11,42 +15,25 @@
     Tailwind y Astro, y control de versiones con Git y GitHub. Mi objetivo es
     seguir creciendo como desarrollador.
   </p>
+  <div class="grid grid-cols-2 gap-4 justify-center py-4">
+    <TechnologiesCard image="kotlin.png", percent={75} label="Kotlin Logo"/>
+    <TechnologiesCard image="jetpack.svg", percent={75} label="Jetpack Compose Logo"/>
+    <TechnologiesCard image="git.svg", percent={50} label="Git Logo"/>
+    <TechnologiesCard image="github.png", percent={50} label="GitHub Logo"/>
+    <TechnologiesCard image="astro.png", percent={45} label="Astro Logo"/>
+    <TechnologiesCard image="tailwind.svg", percent={45} label="Tailwind Logo"/>
+  </div>
+  <h2 class="text-center text-xl py-4">Intereses...</h2>
+  <p class="text-center">
+    Tengo interes en las siguientes tecnologías, he creado al menos un proyecto pero no tengo mucho conocimiento, estoy abierto a seguir explorando estas tecnologías y aprender continuamente...
+  </p>
   <div class="flex flex-wrap gap-4 justify-center py-4">
-    <img
-      src="kotlin.png"
-      alt="kotlinLogo"
-      class="w-12 h-12 object-contain hover:scale-125"
-      title="Kotlin"
-    />
-    <img
-      src="jetpack.svg"
-      alt="jetpackLogo"
-      class="w-12 h-12 object-contain hover:scale-125"
-      title="JetpackCompose"
-    />
-    <img
-      src="git.svg"
-      alt="gitLogo"
-      class="w-12 h-12 object-contain hover:scale-125"
-      title="Git"
-    />
-    <img
-      src="github.png"
-      alt="githubLogo"
-      class="w-12 h-12 object-contain hover:scale-125"
-      title="GitHub"
-    />
-    <img
-      src="astro.png"
-      alt="astroLogo"
-      class="w-12 h-12 object-cover hover:scale-125"
-      title="Astro"
-    />
-    <img
-      src="tailwind.svg"
-      alt="tailwindLogo"
-      class="h-12 object-cover hover:scale-125"
-      title="Tailwind"
-    />
+    <img class="h-20 w-20 object-contain hover:scale-125" src="mysql.svg" alt="MySQL Logo" title="MySQL">
+    <img class="h-20 w-20 object-contain hover:scale-125" src="react.png" alt="React Logo" title="React">
+    <img class="h-20 w-20 object-contain hover:scale-125" src="node.png" alt="Node Logo" title="Node">
+    <img class="h-20 w-20 object-contain hover:scale-125" src="express.png" alt="Express Logo" title="Express">
+    <img class="h-20 w-20 object-contain hover:scale-125" src="Ktor.svg" alt="Ktor Logo" title="Ktor">
+    <img class="h-20 w-20 object-contain hover:scale-125" src="net.png" alt=".NET Logo" title=".NET">
+    <img class="h-20 w-20 object-contain hover:scale-125" src="CSharp.png" alt="C# Logo" title="C#">
   </div>
 </section>

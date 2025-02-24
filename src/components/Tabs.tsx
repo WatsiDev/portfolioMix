@@ -4,7 +4,7 @@ import { webProjects } from "../model/webProjects";
 import { mobileProjects } from "../model/mobileProjects";
 
 const Tabs = () => {
-  const [activeTab, setActiveTab] = useState("web");
+  const [activeTab, setActiveTab] = useState("mobile");
   const [isAnimating, setIsAnimating] = useState(false);
 
   // Asigna los proyectos según la pestaña activa

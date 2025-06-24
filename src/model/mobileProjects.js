@@ -32,5 +32,24 @@ export const mobileProjects = [
       web: null,
       imageWeb: null
     },
+    {
+      image: "SimuPhone.avif",
+      title: "SimuPhone",
+      text: "SimuPhone es una aplicación que simula la experiencia de un teléfono móvil dentro de una única app. Incluye una pantalla de bloqueo personalizable, una pantalla de inicio con íconos interactivos y múltiples aplicaciones funcionales integradas, como calculadora, cámara, agenda de contactos y llamadas telefónicas simuladas. La arquitectura del proyecto utiliza el patrón MVVM (Model-View-ViewModel) para garantizar una estructura modular, escalable y fácil de mantener. \nEste proyecto es ideal para practicar el uso de Jetpack Compose, la gestión del estado y la implementación de una arquitectura robusta en aplicaciones móviles.",
+      tecnologias: [
+        "kotlin.png",
+        "jetpack.svg"
+      ],
+      repositorios: [
+        { 
+          url: "https://github.com/WatsiDev/PhoneSimulator",
+          name: "Repositorio",
+          image: "github2.png"
+        }
+      ],
+      imageRepo: "github2.png",
+      web: null,
+      imageWeb: null
+    }
   ];
   

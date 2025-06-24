@@ -61,7 +61,7 @@ const Card = ({
             {imageWeb ? (
               <img src={imageWeb} alt="Web" className="h-8" />
             ) : (
-              <span>Web</span>
+              <span className="text-white">Ver en Web</span>
             )}
           </a>
         )}

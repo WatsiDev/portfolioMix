@@ -1,17 +1,12 @@
 ---
 interface Props {
     image: string;
-    percent: number;  // Cambié a número para poder usarlo directamente
     label: string;
 }
 
-const { image, percent, label } = Astro.props;
+const { image, label } = Astro.props;
 ---
 
 <div class="flex items-center space-x-4 h-16">
     <img class="h-16 w-16 object-contain" src={image} alt={label} title={label} />
-    <div class="w-full bg-gray-200 rounded-full h-4">
-        <div class="bg-blue-500 h-4 rounded-full" style={`width: ${percent}%`}></div>
-    </div>
-    <p class="text-sm">{percent}%</p>
 </div>
